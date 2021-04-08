@@ -6,9 +6,12 @@
     "postinstall": "umi generate tmp",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage",
-    "prepare": "husky install && husky add .husky/pre-commit 'yarn pre-commit' ",
-    "pre-commit": "lint-staged"
+    "test:coverage": "umi-test --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
@@ -25,11 +28,14 @@
     "@umijs/preset-react": "1.x",
     "cross-env": "^7.0.3",
     "default-passive-events": "^2.0.0",
+    "fastclick": "^1.0.6",
+    "l-browser-storage": "^1.1.0",
     "react-activation": "^0.9.1",
     "recoil": "^0.2.0",
     "umi": "^3.4.8"
   },
   "devDependencies": {
+    "@types/fastclick": "^1.0.29",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
@@ -37,7 +43,7 @@
     "@umijs/test": "^3.4.8",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
-    "husky": "^6.0.0",
+    "husky": "4.3.8",
     "lint-staged": "^10.5.4",
     "pinst": "^2.1.6",
     "postcss": "^8.2.9",

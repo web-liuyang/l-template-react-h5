@@ -2,35 +2,32 @@ import { defineConfig } from 'umi';
 import routes from './src/router';
 
 export default defineConfig({
+  /** 构建目录 */
+  outputPath: '/build',
   /** 设置 node_modules 目录下依赖文件的编译方式 */
   nodeModulesTransform: {
     type: 'none',
   },
   /** 配置别名，对引用路径进行映射 */
   alias: {},
-  /** 构建目录 */
-  outputPath: '/build',
   /** 配置是否让生成的文件包含 hash 后缀，通常用于增量发布和避免浏览器加载缓存 */
   hash: true,
+  exportStatic: {},
   /** 路由模式 */
   history: { type: 'browser' },
   /** 自定义字体 */
   chainWebpack(config) {
     config.module.rule('otf').test(/.otf$/).use('file-loader').loader('file-loader');
   },
-  /** 设置要复制到输出目录的文件或文件夹*/
-  /*
-  copy: [
-    {
-      from: './src/public/images',
-      to: '/images',
-    },
-  ],*/
   /** 是否启用按需加载 */
   dynamicImport: {
     /** 动态加载loading */
     loading: '@/Loading',
   },
+  /* 开启 TypeScript 编译时类型检查。 */
+  forkTSChecker: {},
+  /* 快速刷新（Fast Refresh），开发时可以保持组件状态，同时编辑提供即时反馈 */
+  // fastRefresh:{},
   /** 移动端布局适配 */
   extraPostCSSPlugins: [
     // require('postcss-flexbugs-fixes'),

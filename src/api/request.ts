@@ -1,5 +1,4 @@
 import { extend } from 'umi-request';
-
 import { Toast } from '@/components/l-react-ui';
 
 const req = extend({

@@ -6,7 +6,8 @@ const routes: Routes = [
   {
     path: '/',
     exact: true,
-    component: '@/pages/Home/index', // 主页
+    component: '@/pages/Home/index',
+    title: 'Home',
   },
 ];
 

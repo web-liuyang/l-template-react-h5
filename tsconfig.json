@@ -21,7 +21,7 @@
     "config/**/*",
     ".umirc.ts",
     "typings.d.ts"
-  ],
+, "utoo"  ],
   "exclude": [
     "node_modules",
     "lib",
