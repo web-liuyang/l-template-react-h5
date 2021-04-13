@@ -15,13 +15,7 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "mock/**/*",
-    "src/**/*",
-    "config/**/*",
-    ".umirc.ts",
-    "typings.d.ts"
-, "utoo"  ],
+  "include": ["mock/**/*", "src/**/*", "config/**/*", ".umirc.ts", "typings.d.ts"],
   "exclude": [
     "node_modules",
     "lib",

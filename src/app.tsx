@@ -4,6 +4,7 @@ import { RecoilRoot } from 'recoil';
 import { AliveScope } from 'react-activation';
 import vconsole from 'vconsole';
 import fastclick from 'fastclick';
+
 // @ts-ignore 解决点击事件延迟300毫秒
 fastclick.attach(document.body);
 

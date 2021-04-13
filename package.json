@@ -27,9 +27,11 @@
     "@ant-design/pro-layout": "^6.5.0",
     "@umijs/preset-react": "1.x",
     "cross-env": "^7.0.3",
+    "dayjs": "^1.10.4",
     "default-passive-events": "^2.0.0",
     "fastclick": "^1.0.6",
     "l-browser-storage": "^1.1.0",
+    "l-native-tools": "^1.0.4",
     "react-activation": "^0.9.1",
     "recoil": "^0.2.0",
     "umi": "^3.4.8"

@@ -2,6 +2,7 @@ import { defineConfig } from 'umi';
 import routes from './src/router';
 
 export default defineConfig({
+  title: 'APP',
   /** 构建目录 */
   outputPath: '/build',
   /** 设置 node_modules 目录下依赖文件的编译方式 */
@@ -12,7 +13,10 @@ export default defineConfig({
   alias: {},
   /** 配置是否让生成的文件包含 hash 后缀，通常用于增量发布和避免浏览器加载缓存 */
   hash: true,
+  /* 配置 html 的输出形式 */
   exportStatic: {},
+  /* 多线程 */
+  // workerLoader: {},
   /** 路由模式 */
   history: { type: 'browser' },
   /** 自定义字体 */
@@ -43,5 +47,6 @@ export default defineConfig({
   ],
   /** 忽略 moment 的 locale 文件，用于减少尺寸 */
   ignoreMomentLocale: true,
+  /* 路由 */
   routes,
 });

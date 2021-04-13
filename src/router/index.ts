@@ -9,6 +9,11 @@ const routes: Routes = [
     component: '@/pages/Home/index',
     title: 'Home',
   },
+  {
+    path: '*',
+    component: '@/404',
+    title: '404',
+  },
 ];
 
 export default routes;
